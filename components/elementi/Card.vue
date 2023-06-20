@@ -1,9 +1,12 @@
 <template>
   <div class="">
     <img :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path " :alt="film.title">
-    <p class="text-2xl font-extrabold">  
-      {{ film.original_title }}
-    </p>
+
+    <NuxtLink :to="'/movie/' + film.id ">
+      <p class="text-2xl font-extrabold">  
+        {{ film.original_title }}
+      </p>
+    </NuxtLink>
     <p class=" truncate text-ellipsis  ">
       {{ film.overview }}
     </p>

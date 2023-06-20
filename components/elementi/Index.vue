@@ -5,13 +5,6 @@ const filmPerGenere = ref()
 const { data: elenco } = await useApi('https://api.themoviedb.org/3/discover/movie')
 const { data: generi } = await useApi('https://api.themoviedb.org/3/genre/movie/list')
 
-async function Filtra(filmScritto) {
-
-  // secondo liv
-  const { data, pending, error, reload } = await useApi('https://api.themoviedb.org/3/search/movie?query=' + filmScritto)
-  elenco.value = data.value
-} // qui data viene distrutta
-
 </script>
 
 <template>
